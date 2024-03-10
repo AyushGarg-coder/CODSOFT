@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1102</width>
+    <height>839</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>3</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Contact Book</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame{
+background-color: rgb(213, 213, 213);
+}
+/*QLabel{
+color:black;
+font-size:14px;
+}
+*/
+#label
+{
+color:black;
+font-size:25px;
+}
+QLineEdit{
+height:35px;
+margin-top:10px;
+font-size:15px;
+border:2px solid grey;
+padding: 5px 15px;
+}
+QLineEdit:hover{
+border:2px solid red;
+}
+QLineEdit:focus{
+border: 2px solid green;
+}
+QPushButton{
+margin-top:15px;
+height:50px;
+width:100px;
+color:white;
+background-color:black;
+border-radius:15px;
+font-size:18px;
+}
+QPushButton:hover{
+border:2px solid green;
+color:white;
+background-color:blue;
+}
+QPushButton:focus{
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="Line" name="line_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>1081</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="lineWidth">
+        <number>4</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>1081</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>CONTACT BOOK</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="Line" name="line_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>1081</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="lineWidth">
+        <number>4</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>1081</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string> Contact Information</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="Line" name="line">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>1071</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>150</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Name :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>150</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Phone :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>220</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Email :</string>
+       </property>
+      </widget>
+      <widget class="Line" name="line_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>1081</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="lineWidth">
+        <number>4</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>220</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Address : </string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="email_input">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>210</y>
+         <width>301</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="address_input">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>210</y>
+         <width>331</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="search_btn">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>290</y>
+         <width>191</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SEARCH</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+Del</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="clear_btn">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>380</y>
+         <width>191</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CLEAR</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+Z</string>
+       </property>
+      </widget>
+      <widget class="Line" name="line_7">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>450</y>
+         <width>1081</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>4</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>480</y>
+         <width>1081</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>View Information</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="Line" name="line_8">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>500</y>
+         <width>1081</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>520</y>
+         <width>1081</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Sans Serif</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectColumns</enum>
+       </property>
+       <property name="gridStyle">
+        <enum>Qt::SolidLine</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>false</bool>
+       </property>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>262</number>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>NAME</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>PHONE</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>EMAIL</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>ADDRESS</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLineEdit" name="name_input">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>140</y>
+         <width>331</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="phone_input">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>140</y>
+         <width>301</width>
+         <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="add_contact_btn">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>290</y>
+         <width>191</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ADD CONTACT</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+Del</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="delete_contact_btn">
+       <property name="geometry">
+        <rect>
+         <x>800</x>
+         <y>290</y>
+         <width>191</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DELETE CONTACT</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+Del</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="update_btn_4">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>380</y>
+         <width>191</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>UPDATE CONTACT</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+Del</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>name_input</tabstop>
+  <tabstop>phone_input</tabstop>
+  <tabstop>address_input</tabstop>
+  <tabstop>email_input</tabstop>
+  <tabstop>search_btn</tabstop>
+  <tabstop>add_contact_btn</tabstop>
+  <tabstop>delete_contact_btn</tabstop>
+  <tabstop>update_btn_4</tabstop>
+  <tabstop>clear_btn</tabstop>
+  <tabstop>tableWidget</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../DTI project/attendance management system/images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>clear_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>address_input</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>631</x>
+     <y>451</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>297</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clear_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>email_input</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>591</x>
+     <y>451</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>842</x>
+     <y>240</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clear_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>phone_input</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>617</x>
+     <y>451</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>882</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clear_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>name_input</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>564</x>
+     <y>451</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
